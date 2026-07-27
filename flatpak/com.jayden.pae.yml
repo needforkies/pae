@@ -1,6 +1,6 @@
 app-id: com.jayden.pae
 runtime: org.gnome.Platform
-runtime-version: "50"
+runtime-version: "49"
 sdk: org.gnome.Sdk
 
 command: PAE
@@ -12,21 +12,16 @@ finish-args:
   - --share=ipc
 
 modules:
-
   - name: pae
     buildsystem: simple
     build-commands:
-      - install -Dm755 PAE /app/bin/PAE
-      - install -Dm644 com.jayden.pae.desktop /app/share/applications/com.jayden.pae.desktop
-      - install -Dm644 com.jayden.pae.metainfo.xml /app/share/metainfo/com.jayden.pae.metainfo.xml
-      - install -Dm644 com.jayden.pae.png /app/share/icons/hicolor/512x512/apps/com.jayden.pae.png
+      - cargo build --release --offline
+      - install -Dm755 target/release/PAE /app/bin/PAE
+      - install -Dm644 assets/applications/com.jayden.pae.desktop /app/share/applications/com.jayden.pae.desktop
+      - install -Dm644 assets/metainfo/com.jayden.pae.metainfo.xml /app/share/metainfo/com.jayden.pae.metainfo.xml
+      - install -Dm644 assets/icons/hicolor/512x512/apps/com.jayden.pae.png /app/share/icons/hicolor/512x512/apps/com.jayden.pae.png
 
     sources:
-      - type: file
-        path: ../target/release/PAE
-      - type: file
-        path: ../assets/applications/com.jayden.pae.desktop
-      - type: file
-        path: ../assets/metainfo/com.jayden.pae.metainfo.xml
-      - type: file
-        path: ../assets/icons/hicolor/512x512/apps/com.jayden.pae.png
+      - type: archive
+        url: https://github.com/needforkies/pae/archive/refs/tags/v0.1.0.tar.gz
+        sha256: 09bd8c4cb6330ba80464caea31224d85583544181b55153be35ef948f5429060
