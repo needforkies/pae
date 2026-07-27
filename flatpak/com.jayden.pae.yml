@@ -17,15 +17,14 @@ finish-args:
 
 modules:
   - name: pae
+
     buildsystem: simple
 
     build-options:
       append-path: /usr/lib/sdk/rust-stable/bin
 
     build-commands:
-      - mkdir -p .cargo
-      - cp cargo/config.toml .cargo/config.toml
-      - cargo build --release --offline
+      - cargo build --release
       - install -Dm755 target/release/PAE /app/bin/PAE
       - install -Dm644 assets/applications/com.jayden.pae.desktop /app/share/applications/com.jayden.pae.desktop
       - install -Dm644 assets/metainfo/com.jayden.pae.metainfo.xml /app/share/metainfo/com.jayden.pae.metainfo.xml
@@ -34,4 +33,4 @@ modules:
     sources:
       - type: archive
         url: https://github.com/needforkies/pae/archive/refs/tags/v0.1.0.tar.gz
-        sha256: 09bd8c4cb6330ba80464caea31224d85583544181b55153be35ef948f5429060
+        sha256: 3b8ca9c540c2a9ac94251e9d8e18f1ad3c0d10230f07848daa5c124c8fadb1d2
