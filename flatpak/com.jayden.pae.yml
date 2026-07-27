@@ -1,7 +1,11 @@
 app-id: com.jayden.pae
+
 runtime: org.gnome.Platform
 runtime-version: "49"
 sdk: org.gnome.Sdk
+
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
 
 command: PAE
 
@@ -14,7 +18,13 @@ finish-args:
 modules:
   - name: pae
     buildsystem: simple
+
+    build-options:
+      append-path: /usr/lib/sdk/rust-stable/bin
+
     build-commands:
+      - mkdir -p .cargo
+      - cp cargo/config.toml .cargo/config.toml
       - cargo build --release --offline
       - install -Dm755 target/release/PAE /app/bin/PAE
       - install -Dm644 assets/applications/com.jayden.pae.desktop /app/share/applications/com.jayden.pae.desktop
