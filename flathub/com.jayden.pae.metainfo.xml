@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+
+  <id>com.jayden.pae</id>
+
+  <name>PAE</name>
+
+  <summary>PAE Editor</summary>
+
+  <description>
+    <p>
+      PAE is a simple editor application.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">com.jayden.pae.desktop</launchable>
+
+  <developer>
+    <name>Jayden</name>
+  </developer>
+
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <categories>
+    <category>Utility</category>
+    <category>Development</category>
+  </categories>
+
+  <icon type="stock">com.jayden.pae</icon>
+
+  <url type="homepage">https://github.com/needforkies/pae</url>
+
+  <releases>
+    <release version="0.1.0" date="2026-07-27">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+
+</component>
