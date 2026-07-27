@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.jayden.pae</id>
 
   <name>PAE</name>
-  <summary>PAE Editor</summary>
+  <summary>Lightweight GTK4 text editor</summary>
 
-  <metadata_license>MIT</metadata_license>
-  <project_license>MIT</project_license>
+  <developer_name>Jayden Lambrecht</developer_name>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
 
   <description>
     <p>
-      PAE is a GTK4 editor application written in Rust.
+      PAE is a lightweight GTK4 text editor written in Rust.
+      It provides a simple and fast interface for creating and editing text files
+      with a clean desktop experience.
     </p>
   </description>
 
-  <launchable type="desktop-id">
-    com.jayden.pae.desktop
-  </launchable>
+  <launchable type="desktop-id">com.jayden.pae.desktop</launchable>
 
-  <url type="homepage">
-    https://github.com/needforkies/pae
-  </url>
+  <screenshots>
+    <screenshot type="default">
+      <image>
+        https://github.com/needforkies/pae/raw/main/screenshots/main.png
+      </image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
 
   <releases>
-    <release version="0.1.0" date="2026-07-27"/>
+    <release version="0.1.0" date="2026-07-27">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
   </releases>
 
+  <url type="homepage">https://github.com/needforkies/pae</url>
+  <url type="bugtracker">https://github.com/needforkies/pae/issues</url>
+
+  <provides>
+    <binary>pae</binary>
+  </provides>
 </component>
