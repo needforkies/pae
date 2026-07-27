@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.jayden.pae</id>
+
+  <name>PAE</name>
+  <summary>PAE Editor</summary>
+
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <description>
+    <p>
+      PAE is a GTK4 editor application written in Rust.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">
+    com.jayden.pae.desktop
+  </launchable>
+
+  <url type="homepage">
+    https://github.com/needforkies/pae
+  </url>
+
+  <releases>
+    <release version="0.1.0" date="2026-07-27"/>
+  </releases>
+
+</component>

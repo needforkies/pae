@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PAE
+Comment=PAE Editor
+Exec=pae
+Icon=com.jayden.pae
+Terminal=false
+Type=Application
+Categories=Utility;TextEditor;
+StartupNotify=true
