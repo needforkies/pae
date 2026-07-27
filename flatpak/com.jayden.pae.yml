@@ -1,0 +1,32 @@
+app-id: com.jayden.pae
+runtime: org.gnome.Platform
+runtime-version: "48"
+sdk: org.gnome.Sdk
+
+command: PAE
+
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --share=ipc
+
+modules:
+
+  - name: pae
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 PAE /app/bin/PAE
+      - install -Dm644 com.jayden.pae.desktop /app/share/applications/com.jayden.pae.desktop
+      - install -Dm644 com.jayden.pae.metainfo.xml /app/share/metainfo/com.jayden.pae.metainfo.xml
+      - install -Dm644 com.jayden.pae.png /app/share/icons/hicolor/512x512/apps/com.jayden.pae.png
+
+    sources:
+      - type: file
+        path: ../target/release/PAE
+      - type: file
+        path: ../assets/applications/com.jayden.pae.desktop
+      - type: file
+        path: ../assets/metainfo/com.jayden.pae.metainfo.xml
+      - type: file
+        path: ../assets/icons/hicolor/512x512/apps/com.jayden.pae.png

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+
+  <id>com.jayden.pae</id>
+
+  <name>PAE</name>
+
+  <summary>Modern lightweight text editor</summary>
+
+  <description>
+    <p>
+      PAE is a modern lightweight text editor built with Rust and GTK4.
+      It provides a fast and simple writing environment for Linux desktop users.
+      The application is designed to be small, efficient and easy to use.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">com.jayden.pae.desktop</launchable>
+
+  <provides>
+    <binary>PAE</binary>
+  </provides>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+
+  <developer id="com.jayden">
+    <name>Jayden Lambrecht</name>
+  </developer>
+
+  <url type="homepage">https://github.com</url>
+
+  <icon type="stock">com.jayden.pae</icon>
+
+  <categories>
+    <category>Utility</category>
+    <category>TextEditor</category>
+  </categories>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+  </content_rating>
+
+  <releases>
+    <release version="0.1.0" date="2026-07-27">
+      <description>
+        <p>
+          Initial release of PAE.
+        </p>
+      </description>
+    </release>
+  </releases>
+
+</component>

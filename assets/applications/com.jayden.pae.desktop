@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=PAE
+GenericName=Text Editor
+Comment=A simple modern text editor
+Exec=PAE
+Icon=com.jayden.pae
+Terminal=false
+Type=Application
+Categories=Utility;TextEditor;Development;
+StartupNotify=true
+StartupWMClass=PAE

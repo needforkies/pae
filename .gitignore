@@ -1,0 +1,21 @@
+# Rust
+target/
+
+# Flatpak
+.flatpak-builder/
+build-dir/
+repo/
+*.flatpak
+
+# Arch package builds
+pkg/
+*.pkg.tar.zst
+
+# Local release
+release/
+
+# Test files
+asd
+awd
+sgdf
+yeah
